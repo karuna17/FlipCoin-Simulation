@@ -3,7 +3,7 @@
 count=1
 h=0
 t=0
-
+diff=0
 for ((i=1; i<=50; i++))
 do
   ((coun++))
@@ -20,12 +20,15 @@ done
 echo "Heads : " $h
 echo "Tails : " $t
 
-if [ $h -gt $t ]
+if [ $h -eq $t ]
+then
+ echo Heads and Tails Tie
+elif [ $h -gt $t ]
 then 
- echo Heads Won
+ echo Heads Won by $h
 elif [ $h -lt $t ]
 then 
- echo Tails Won
+ echo Tails Won by $t
 else
- echo Tie between Heads and Tails
+ echo Heads and Tails loss
 fi
